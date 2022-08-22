@@ -36,9 +36,9 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 1. Download the latest image from https://www.beamylabs.com/releases/. At the time of writing this is *rpi-20220701_192701.img.gz*. 
 2. In Raspberry Pi Imager, choose "Use custom" and then select the downloaded image and write the image to the SD card.
 3. Put the SD card in the Pi
-4. Connect the Pi with ethernet to a WiFi router with Internet access if avaialable( highly recommended)
+4. Connect the Pi with ethernet to a WiFi router with Internet access if available (highly recommended)
 5. Boot the Pi, this might take a few minutes the first time
-6. Next its time to connect to the Pi with a web-browser but first we need to get the IP
+6. Next it's time to connect to the Pi with a web-browser but first we need to get the IP
    to the broker.
 
    **Connected to Internet through WiFi router**
@@ -50,7 +50,7 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 
    ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
-   Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You know have Internet
+   Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You now have Internet
    access from both your client and the broker which will make things easier as we move on.
  
    **Not connected to WiFi router**
@@ -126,7 +126,7 @@ Running BeamyBroker requires a valid license. After installing BeamyBroker you c
 
 5. To verify that your installation is successful you can navigate to "Traffic Monitor" and replay 
    a test drive that comes bundled. Expand the "Try out preconfigured and automatic playback" and press
-   "START PLAYBACK".
+   "Start playback".
 
     ![alt text](images/traffic_monitor_notraffic.png "License and upgrading")
 
@@ -147,7 +147,7 @@ Running BeamyBroker requires a valid license. After installing BeamyBroker you c
    that this equipment is properly setup.<br>
    You also need a dbc file that matches the car model
 
-Once the broker is done you can use the web-client to generate a configuration that the broker can
+Once the broker is operational with a license you can use the web-client to generate a configuration that the broker can
 use.
 
 There are two ways to configure the broker, one is to use the UI wizard and the other way is to upload a configuration directory containing the required files. Here we will use the wizard.
