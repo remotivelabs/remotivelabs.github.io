@@ -36,10 +36,11 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 1. Download the latest image from https://www.beamylabs.com/releases/. At the time of writing this is *rpi-20220701_192701.img.gz*. 
 2. In Raspberry Pi Imager, choose "Use custom" and then select the downloaded image and write the image to the SD card.
 3. Put the SD card in the Pi
-4. Connect the Pi with ethernet to a WiFi router with Internet access if available (highly recommended)
+4. Connect the Pi to directly ethernet so it gets Internet access, where it will download additional upgrades when available (highly recommended)
+
+!> ssh access is by default only available over wired ethernet. Username/pwd pi/Aut0m0tive
 5. Boot the Pi, this might take a few minutes the first time
-6. Next it's time to connect to the Pi with a web-browser but first we need to get the IP
-   to the broker.
+6. Next it's time to connect to the Pi with a web-browser but first we need to resolve the IP to the broker.
 
    **Connected to Internet through WiFi router**
 
@@ -168,7 +169,7 @@ You can always query the current configuration in the menu. In web-client choose
       ![alt text](images/current_can_configuration.png "Current configuration")
 
 The following is a typical and very simple configuration
-```
+```json
 {
   "chains": [
     {
@@ -195,7 +196,7 @@ The example above contains two namespaces for the sake of clarity. Your configur
 
 ### Upload your custom configuration
 
-You can upload you custom configuration, in the web-client choose "Configuration" and select "Pick directory". For the example above the configuration which should be selected should contain the following
+You can upload your custom configuration, in the web-client choose "Configuration" and select "Pick directory". For the example above the directory which should be selected should contain the following
       ![alt text](images/configuration_folder.png "Current configuration")
 
 Once uploaded the broker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
