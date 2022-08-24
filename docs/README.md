@@ -166,7 +166,8 @@ There are two ways to configure the broker, one is to use the UI wizard and the 
 ## About configuration
 
 You can always query the current configuration in the menu. In web-client choose "Configuration" and you should see a valid configuration.
-      ![alt text](images/current_can_configuration.png "Current configuration")
+
+![alt text](images/current_can_configuration.png "Current configuration")
 
 The following is a typical and very simple configuration
 ```json
@@ -197,6 +198,7 @@ The example above contains two namespaces for the sake of clarity. Your configur
 ### Upload your custom configuration
 
 You can upload your custom configuration, in the web-client choose "Configuration" and select "Pick directory". For the example above the directory which should be selected should contain the following
-      ![alt text](images/configuration_folder.png "Current configuration")
+
+![alt text](images/configuration_folder.png "Current configuration")
 
 Once uploaded the broker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
