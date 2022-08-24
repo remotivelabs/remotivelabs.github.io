@@ -162,3 +162,40 @@ There are two ways to configure the broker, one is to use the UI wizard and the 
 
 3. Your broker is now ready to subscribe to signals in your car.
 
+## About configuration
+
+You can always query the current configuration in the menu. In web-client choose "Configuration" and you should see a valid configuration.
+      ![alt text](images/current_can_configuration.png "Current configuration")
+
+The following is a typical and very simple configuration
+```
+{
+  "chains": [
+    {
+      "namespace": "my_can0",
+      "type": "can",
+      "database": "can/MyCAN.dbc",
+      "device_name": "can0"
+    },
+    {
+      "namespace": "my_can1",
+      "type": "can",
+      "database": "can/MyOtherCAN.dbc",
+      "device_name": "can1"
+    }
+  ]
+}
+```
+* `namespace` is your given name, which you can choose freely. This is the name you will use when you browse the bus in the `tree view` of write some code to access it. Suggestions would be: `BodyCAN`, `VehicleCan`  
+* `type` suggest what kind of physical link we are connectiong to. This could be `can, canfd, vcan, lin, flexray, udp`
+* `database` hold information on how to encode and decode the traffic on link. Typlically a file with extenision `ldf, dbc, xml`
+* `device_name` is the physical socket representaion on your host computer. These names are controlled by your linux kernel and can be listed by doing `ip a`. On our prebuilt images valid names are `[can0..can1], [vcan0..vcan3]` 
+
+The example above contains two namespaces for the sake of clarity. Your configuration can hold any number of namespace depeding on your hardware setup.
+
+### Upload your custom configuration
+
+You can upload you custom configuration, in the web-client choose "Configuration" and select "Pick directory". For the example above the configuration which should be selected should contain the following
+      ![alt text](images/configuration_folder.png "Current configuration")
+
+Once uploaded the broker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
