@@ -1,6 +1,6 @@
 # beamylabs.github.io
 
-Repo for the GitHub Pages site beamylabs.github.io built using Docsify (docsify.js.org)
+Repo for the GitHub Pages site https://beamylabs.github.io built using Docsify (docsify.js.org)
 
 Pushing the markdown to this repo automagically updates the GitHub Pages site
 
