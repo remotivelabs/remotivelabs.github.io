@@ -1,22 +1,3 @@
-# What do your want to do?
-
-## Curious First time user
-
-## Subscribe to signals in vehicle
-
-## Playback a recording from another broker
-
-# What is this?
-
-## Realtime
-
-## Record
-
-## Replay
-
-## Stack
-
-HW and SW
 
 # Getting started
 
