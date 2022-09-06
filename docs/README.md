@@ -203,3 +203,56 @@ You can upload your custom configuration, in the web-client choose "Configuratio
 ![alt text](images/configuration_folder.png "Current configuration")
 
 Once uploaded the broker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
+
+## Additonal interfaces
+
+As the configuration above suggested additional interfaces can be added to the existing setup. Some of these setups requires `ssh` and custom configuration of the host, in this scenario, the Raspberry Pi 4.
+
+> Typical usb to ethernet adapter [here](images/USB-to-Ethernet.png) 
+
+> In this case `host` referrs to Raspberry Pi 4
+
+### LIN interfaces
+
+Connect a secondary usb to ETH adapter to the host. Here you can connect a single `LIN transivers` box alternatively a switch with a number of `LIN transivers` each lin transiver is identified and configured according to it's unique `device_identifier`
+
+This id needs to reflect and be present in `interfaces.json`. The following configuration shows two `lin` devices, `8` and `7`. Note that `8` has been configured to operate as master whereas `7` operates as slave.  
+```json
+{
+  "chains": [
+    {
+      "namespace": "ecu_A",
+      "type": "lin",
+      "config": {
+        "device_identifier": 8,
+        "server_port": 2014,
+        "target_host": null,
+        "target_port": 2013
+      },
+      "node_mode": "master",
+      "database": "ldf/test.ldf",
+      "schedule_file": "ldf/test.ldf",
+      "schedule_table_name": "DEVMLIN01Schedule01",
+      "schedule_autostart": true
+    },
+    {
+      "namespace": "ecu_B",
+      "type": "lin",
+      "config": {
+        "device_identifier": 7,
+        "server_port": 2015,
+        "target_host": null,
+        "target_port": 2016
+      },
+      "node_mode": "slave",
+      "database": "ldf/test.ldf"
+    }
+  ]
+}
+```
+
+!> The prebuilt image will host a DHCP server on the added adapter. LIN transivers and the Broker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
+
+### CAN interfaces (additonal)
+### FR interfaces
+
