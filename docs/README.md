@@ -216,7 +216,10 @@ As the configuration above suggested additional interfaces can be added to the e
 
 Connect a secondary usb to ETH adapter to the host. Here you can connect a single `LIN transivers` box alternatively a switch with a number of `LIN transivers` each lin transiver is identified and configured according to it's unique `device_identifier`
 
-This id needs to reflect and be present in `interfaces.json`. The following configuration shows two `lin` devices, `8` and `7`. Note that `8` has been configured to operate as master whereas `7` operates as slave.  
+This id needs to reflect and be present in `interfaces.json`. The following configuration shows two `lin` devices, `8` and `7`. Note that `8` has been configured to operate as master whereas `7` operates as slave.
+
+Each LIN transiver need a unique set of `target_port` and `server port` which can be selected freely. Once the trancivers get powered their configurations will be distributed.
+
 ```json
 {
   "chains": [
@@ -226,7 +229,6 @@ This id needs to reflect and be present in `interfaces.json`. The following conf
       "config": {
         "device_identifier": 8,
         "server_port": 2014,
-        "target_host": null,
         "target_port": 2013
       },
       "node_mode": "master",
@@ -241,7 +243,6 @@ This id needs to reflect and be present in `interfaces.json`. The following conf
       "config": {
         "device_identifier": 7,
         "server_port": 2015,
-        "target_host": null,
         "target_port": 2016
       },
       "node_mode": "slave",
@@ -254,5 +255,7 @@ This id needs to reflect and be present in `interfaces.json`. The following conf
 !> The prebuilt image will host a DHCP server on the added adapter. LIN transivers and the Broker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
 
 ### CAN interfaces (additonal)
+
+Any socketcan compatible USB dongle can be added when physical interfaces are required.
 ### FR interfaces
 
