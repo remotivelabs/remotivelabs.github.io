@@ -103,6 +103,26 @@ This part will explain how to install and run beamy-broker on linux with docker.
    
 4. Next step is to request a [License](#Acquire-your-License)
 
+### Code samples
+
+When your broker is up and running you are ready to connect and run your own code.
+
+We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
+
+As a developer you may choose to use our maintained libraries or work directly towards our public _gRPC interface_.
+
+#### Python
+
+The [Python](https://www.python.org/) samples are found in the [python directory](https://github.com/remotivelabs/remotivelabs-samples/python) in our samples repository. All the Python samples use our Python library which is available in the Python Package manager [PyPi](https://pypi.org/user/remotivelabs/).
+
+Install the Python library with `pip` in a terminal:
+
+    pip install remotivelabs-broker
+
+After the installation in complete you may execute any of the samples in the Python directory.
+
+Remember all our samples requires a broker which is up and running. Each sample is provided with a _readme_ file explaining how to run the sample with the necessary arguments.
+
 # Acquire your License
 
 Running BeamyBroker requires a valid license. After installing BeamyBroker you can request a license through the web client (or through the license API).
