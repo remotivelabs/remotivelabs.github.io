@@ -276,6 +276,37 @@ Each LIN transiver need a unique set of `target_port` and `server port` which ca
 
 ### CAN interfaces (additonal)
 
-Any socketcan compatible USB dongle can be added when physical interfaces are required.
+Any socketcan compatible USB dongle can be added when physical interfaces are required. Amongst others, [PEAK-System](https://www.peak-system.com/) does provide such devices. 
 ### FR interfaces
 
+!> Write is currently not supported for FR devices
+#### Technica CM CAN COMBO
+
+!> Make sure that your Techinca devices is configured to use `PLP` headers and also make sure to note specified `Destination MAC` (available by clicking `SPY`) typically `01:00:5e:00:00:00`. 
+
+Connect your Technica device to the secondary usb ethernet interface `eth1` which is mentioned above. As mulitcast address provide `Destination MAC`.
+```json
+{
+  "chains": [
+      {
+         "type": "flexray",
+         "device_name": "flexray0",
+         "namespace": "MyFlexrayNamespace",
+         "config": {
+            "target_host": "127.0.0.1",
+            "target_port": 51111,
+            "hardware": "Technica_CM_CAN_COMBO",
+            "target_config": {
+               "interface": "eth1",
+               "multicast": "01:00:5e:00:00:00"
+            }
+         },
+         "database": "fibex_files/flexray.xml"
+      }
+   ]
+}
+```
+
+#### Host Mobility MX-4 T30 FR
+
+Please reach out to us (hello@remotivelabs.com) if you like to use MX30-FR as a flexray bridge.
