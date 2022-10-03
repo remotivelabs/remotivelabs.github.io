@@ -1,5 +1,5 @@
 
-# Getting started
+# User Guide - Get (Evaluation) Licence
 
 ## Installation
 
