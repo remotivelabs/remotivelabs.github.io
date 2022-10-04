@@ -293,3 +293,4 @@ Connect your Technica device to the secondary usb ethernet interface `eth1` whic
 #### Host Mobility MX-4 T30 FR
 
 Please reach out to us (hello@remotivelabs.com) if you like to use MX30-FR as a flexray bridge.
+
