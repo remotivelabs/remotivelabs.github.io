@@ -1,7 +1,5 @@
 # beamylabs.github.io
 
-Use `develop` branch for work in progress.
-
 Repo for the GitHub Pages site https://remotivelabs.github.io/ built using Docsify (docsify.js.org)
 
 
