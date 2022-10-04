@@ -34,11 +34,11 @@ We offer a cloud demo with pre-recorded signal data. Get a first sense of the pl
 
 Please follow the steps below which include installing RemotiveBroker on the hardware of your choice before you can request a licence. Email [support@remotivelabs.com](support@remotivelabs.com) in case of questions.
 
-### 1) Choose your hardware
+### 1. Choose your hardware
 
 RemotiveBroker can be installed on the hardware of your choice. Please find our growing list of reference kits under our Downloads & Documentations page on our website. 
 
-### a) Reference kit: Raspberry Pi 
+#### a. Reference kit: Raspberry Pi 
 
 For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www.remotivelabs.com/releases/) with the [Seeed CAN-shield](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) drivers. 
 
@@ -58,23 +58,23 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 !> ssh access is by default only available over wired ethernet. Username/pwd pi/Aut0m0tive
 
 5. Boot the Pi, this might take a few minutes the first time
-6. Next it's time to connect to the Pi with a web-browser but first we need to resolve the IP to the broker.
+6. Next it's time to connect to the Pi with a web-browser but first we need to resolve the IP to the RemotiveBroker.
 
    **Connected to Internet through router (wired)**
 
    If possible, the easiest way is the get the IP from your router.
 
-   If this is not possible, you need to connect to the brokers internal WiFi access point.
+   If this is not possible, you need to connect to the RemotiveBroker internal WiFi access point.
    From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. Under "About" your can find the URL where the broker is accessible on your regular WiFi.
 
    ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
    Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You now have Internet
-   access from both your client and the broker which will make things easier as we move on.
+   access from both your client and the RemotiveBroker which will make things easier as we move on.
  
    **Not connected to Internet router**
 
-   If you are not connected to Internet, you need to connect to the brokers internal WiFi access point.
+   If you are not connected to Internet, you need to connect to the RemotiveBroker internal WiFi access point.
    From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. 
    In this state there is no Internet access on your desktop or your browser which means that things get
    a bit more complicated as we move on.
@@ -86,7 +86,7 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 
 Now you are ready to [Request a License](#request-a-hardware-license)
 
-### b) Refernce kit: Linux + Docker
+#### b. Reference kit: Linux with Docker
 
 > **Prerequisites**<br>
   You will need git, docker, docker-compose installed on your linux distribution<br>
@@ -95,7 +95,7 @@ Now you are ready to [Request a License](#request-a-hardware-license)
 
 2. Next step is to request a [License](#request-a-license)
 
-### 2) Request a Hardware License
+### 2. Request a Hardware License
 
 Running RemotiveBroker requires a valid license. After installing RemotiveBroker you can request a license through the webb application (or through the license API).
 
@@ -114,7 +114,7 @@ Running RemotiveBroker requires a valid license. After installing RemotiveBroker
 
 3. Wait for the returning e-mail and copy/paste the licence phrase and press "ADD LICENSE"
 
-4. Under "About" it should now look something like this and you are now good to start use your broker.
+4. Under "About" it should now look something like this and you are now good to start use your RemotiveBroker.
 
      ![alt text](images/licenced_broker.png "License and upgrading")
 
@@ -124,19 +124,23 @@ Running RemotiveBroker requires a valid license. After installing RemotiveBroker
 
     ![alt text](images/traffic_monitor_notraffic.png "License and upgrading")
 
-   This will upload a broker configuration together with a recorded drive, then start the recording and subscribe to some of the signals.
+   This will upload a RemotiveBroker configuration together with a recorded drive, then start the recording and subscribe to some of the signals.
 
    If everything is ok, you should see some graphs beeing displayed with "live" data.
 
    ![alt text](images/test_drive_graphs.png "License and upgrading")
 
-   You now have a working and licenced broker.
+   You now have a working and licenced RemotiveBroker.
 
-### 3) What to do next
+### 3. What to do next
+
+* If you haven’t already, join our GitHub Community for Q&A and discussions
+* Check out out [code samples](#code-samples)
+* Check out [RemotiveCloud](https://cloud-demo.remotivelabs.com/)
 
 ### Code samples
 
-When your broker is up and running you are ready to connect and run your own code.
+When your RemotiveBroker is up and running you are ready to connect and run your own code.
 
 We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
 
@@ -148,13 +152,17 @@ The [Python](https://www.python.org/) samples are found in the [python directory
 
 Install the Python library with `pip` in a terminal:
 
-    pip install remotivelabs-broker
+    pip install -U remotivelabs-broker
 
 After the installation in complete you may execute any of the samples in the Python directory.
 
-Remember all our samples requires a broker which is up and running. Each sample is provided with a _readme_ file explaining how to run the sample with the necessary arguments.
-   
+Remember all our samples requires a RemotiveBroker roker which is up and running. Each sample is provided with a _readme_ file explaining how to run the sample with the necessary arguments.
 
+> You can host your RemotiveBroker locally alternaively you can deploy you RemotiveBroker in [RemotiveCloud](https://cloud-demo.remotivelabs.com/). 
+   
+#### Andorid integration
+
+For more information, go [here](https://github.com/remotivelabs/remotivelabs-samples/tree/main/integrations/android-vhal).
 
 # Your first configuration
 
@@ -162,10 +170,10 @@ Remember all our samples requires a broker which is up and running. Each sample 
    that this equipment is properly setup.<br>
    You also need a dbc file that matches the car model
 
-Once the broker is operational with a license you can use the web-client to generate a configuration that the broker can
+Once the RemotiveBroker is operational with a license you can use the web-client to generate a configuration that the RemotiveBroker can
 use.
 
-There are two ways to configure the broker, one is to use the UI wizard and the other way is to upload a configuration directory containing the required files. Here we will use the wizard.
+There are two ways to configure the RemotiveBroker, one is to use the UI wizard and the other way is to upload a configuration directory containing the required files. Here we will use the wizard.
 
 1. In the menu in web-client choose "Configuration" and you should see something like this.
 
@@ -175,7 +183,7 @@ There are two ways to configure the broker, one is to use the UI wizard and the 
    
    Pick your dbc file and then you can just click through all steps without any changes. The last step "Reconfigure" will upload the configuration to the broker
 
-3. Your broker is now ready to subscribe to signals in your car.
+3. Your RemotiveBroker is now ready to subscribe to signals in your car.
 
 ## About configuration
 
@@ -215,7 +223,7 @@ You can upload your custom configuration, in the web-client choose "Configuratio
 
 ![alt text](images/configuration_folder.png "Current configuration")
 
-Once uploaded the broker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
+Once uploaded the RemotiveBroker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
 
 ## Additonal interfaces
 
@@ -265,7 +273,7 @@ Each LIN transiver need a unique set of `target_port` and `server port` which ca
 }
 ```
 
-!> The prebuilt image will host a DHCP server on the added adapter. LIN transivers and the Broker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
+!> The prebuilt image will host a DHCP server on the added adapter. LIN transivers and the RemotiveBroker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
 
 ### CAN interfaces (additonal)
 
