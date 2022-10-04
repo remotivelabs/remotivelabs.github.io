@@ -1,33 +1,11 @@
-# What do your want to do?
-
-## Curious First time user
-
-## Subscribe to signals in vehicle
-
-## Playback a recording from another broker
-
-# What is this?
-
-## Realtime
-
-## Record
-
-## Replay
-
-## Stack
-
-HW and SW
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IGNORE ABOVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
 
 # User Guide - Get (Evaluation) Licence
 
-RemotiveLabs is a lightweight and agnostic tooling platform for software-centric automotive development. We offer a free evaluation licence for 30 days. RemotiveBroker can be installed on the hardware of your choice (we have a growing list of [reference kits](https://remotivelabs.tempurl.host/downloads-documentations/).  
+RemotiveLabs is a lightweight and language agnostic platform for software-centric automotive development. We offer a free evaluation licence for 30 days. RemotiveBroker can be installed on the hardware of your choice (we have a growing list of [reference kits](https://remotivelabs.com/downloads-documentations/).  
 
 **Just curious and only need a first taste?**
 
-We offer a cloud demo with pre-recorded signal data. Get a first sense of the platform without logging in: Go to demo in cloud. If you have questions regarding the platform, licence cost or if you have ideas on features you’d like to see? Join our GitHub community or feel free to [Contact us!](www.remotivelabs.com/contact)
+We offer a cloud demo with pre-recorded signal data. Get a first sense of the platform without logging in: [Go to demo in cloud](https://cloud-demo.remotivelabs.com/). If you have questions regarding the platform, licence cost or if you have ideas on features you’d like to see? Join our GitHub community or feel free to [Contact us!](www.remotivelabs.com/contact)
 
 
 ## Get your licence
@@ -91,13 +69,13 @@ Now you are ready to [Request a License](#request-a-hardware-license)
 > **Prerequisites**<br>
   You will need git, docker, docker-compose installed on your linux distribution<br>
 
-1. Get going with `docker-compose` an a few (moments)[https://github.com/remotivelabs/remotivebroker-bootstrap]
+1. Get going with `docker-compose` in a few [moments](https://github.com/remotivelabs/remotivebroker-bootstrap)
 
 2. Next step is to request a [License](#request-a-license)
 
 ### 2. Request a Hardware License
 
-Running RemotiveBroker requires a valid license. After installing RemotiveBroker you can request a license through the webb application (or through the license API).
+Running RemotiveBroker requires a valid license. After installing RemotiveBroker you can request a license through the webb-client (or through the license API).
 
 ![alt text](images/Unlicenced_broker.png "License and upgrading")
 
@@ -134,17 +112,19 @@ Running RemotiveBroker requires a valid license. After installing RemotiveBroker
 
 ### 3. What to do next
 
+Below some tips for how to start getting value from RemotiveBroker and RemotiveExplorer. We recommend (in the order of your choice):
+
 * If you haven’t already, join our GitHub Community for Q&A and discussions
 * Check out out [code samples](#code-samples)
 * Check out [RemotiveCloud](https://cloud-demo.remotivelabs.com/)
 
-### Code samples
+# Code samples
 
 When your RemotiveBroker is up and running you are ready to connect and run your own code.
 
 We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
 
-As a developer you may choose to use our maintained libraries or work directly towards our public _gRPC interface_.
+As a developer you may choose to use our maintained libraries or work directly towards our [public gRCP api](https://github.com/remotivelabs/remotivelabs-apis/tree/main/proto).
 
 #### Python
 
@@ -160,7 +140,7 @@ Remember all our samples requires a RemotiveBroker roker which is up and running
 
 > You can host your RemotiveBroker locally alternaively you can deploy you RemotiveBroker in [RemotiveCloud](https://cloud-demo.remotivelabs.com/). 
    
-#### Andorid integration
+#### Andorid VHAL integration
 
 For more information, go [here](https://github.com/remotivelabs/remotivelabs-samples/tree/main/integrations/android-vhal).
 
@@ -224,6 +204,8 @@ You can upload your custom configuration, in the web-client choose "Configuratio
 ![alt text](images/configuration_folder.png "Current configuration")
 
 Once uploaded the RemotiveBroker will verify that the configuration is valid, if not please verify that your `interfaces.json` and the relative database paths are correct.
+
+!> Advanced reference for `interfaces.json` is located here: [https://github.com/remotivelabs/remotivebroker-bootstrap/configuration/interfaces_referense.json](https://github.com/remotivelabs/remotivebroker-bootstrap/blob/master/configuration/interfaces_referense.json) 
 
 ## Additonal interfaces
 
