@@ -18,22 +18,39 @@
 
 HW and SW
 
-# Getting started
-
-## Installation
-
-### RasperryPi
-
-For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www.beamylabs.com/releases/) with the [Seeed CAN-shield](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) drivers. 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IGNORE ABOVE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
+# User Guide - Get (Evaluation) Licence
 
-!> **Prerequisites**<br>
-   Raspberry Pi + CAN-BUS HAT for Raspberry Pi<br>
-   Raspberry Pi Imager for installation and it can be downloaded here https://www.raspberrypi.org/software/<br>
-   SD card in an SD card reader connected to your computer
+RemotiveLabs is a lightweight and agnostic tooling platform for software-centric automotive development. We offer a free evaluation licence for 30 days. RemotiveBroker can be installed on the hardware of your choice (we have a growing list of [reference kits](https://remotivelabs.tempurl.host/downloads-documentations/).  
 
-1. Download the latest image from https://www.beamylabs.com/releases/. At the time of writing this is *rpi-20220701_192701.img.gz*. 
+**Just curious and only need a first taste?**
+
+We offer a cloud demo with pre-recorded signal data. Get a first sense of the platform without logging in: Go to demo in cloud. If you have questions regarding the platform, licence cost or if you have ideas on features you’d like to see? Join our GitHub community or feel free to [Contact us!](www.remotivelabs.com/contact)
+
+
+## Get your licence
+
+Please follow the steps below which include installing RemotiveBroker on the hardware of your choice before you can request a licence. Email [support@remotivelabs.com](support@remotivelabs.com) in case of questions.
+
+### 1) Choose your hardware
+
+RemotiveBroker can be installed on the hardware of your choice. Please find our growing list of reference kits under our Downloads & Documentations page on our website. 
+
+### a) Reference kit: Raspberry Pi 
+
+For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www.remotivelabs.com/releases/) with the [Seeed CAN-shield](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) drivers. 
+
+
+
+
+> **Prerequisites**<br>
+  Raspberry Pi + CAN-BUS HAT for Raspberry Pi<br>
+  Raspberry Pi Imager for installation and it can be downloaded here https://www.remotivelabs.com/releases/<br>
+  SD card in an SD card reader connected to your computer
+
+1. Download the latest image from https://www.remotivelabs.com/releases/. At the time of writing this is *rpi-20220701_192701.img.gz*. 
 2. In Raspberry Pi Imager, choose "Use custom" and then select the downloaded image and write the image to the SD card.
 3. Put the SD card in the Pi
 4. Connect the Pi to wired ethernet so it gets Internet access, where it will download additional upgrades when available (highly recommended)
@@ -43,22 +60,22 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 5. Boot the Pi, this might take a few minutes the first time
 6. Next it's time to connect to the Pi with a web-browser but first we need to resolve the IP to the broker.
 
-   **Connected to Internet through WiFi router**
+   **Connected to Internet through router (wired)**
 
    If possible, the easiest way is the get the IP from your router.
 
    If this is not possible, you need to connect to the brokers internal WiFi access point.
-   From your phone or computer, connect using WiFi **beamy-\*** (password: beamylabs) and navigate to http://192.168.4.1:8080. Under "About" your can find the URL where the broker is accessible on your regular WiFi.
+   From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. Under "About" your can find the URL where the broker is accessible on your regular WiFi.
 
    ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
    Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You now have Internet
    access from both your client and the broker which will make things easier as we move on.
  
-   **Not connected to WiFi router**
+   **Not connected to Internet router**
 
    If you are not connected to Internet, you need to connect to the brokers internal WiFi access point.
-   From your phone or computer, connect using WiFi **beamy-\*** (password: beamylabs)and navigate to http://192.168.4.1:8080. 
+   From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. 
    In this state there is no Internet access on your desktop or your browser which means that things get
    a bit more complicated as we move on.
 
@@ -67,65 +84,20 @@ For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://www
 
    ![alt text](images/Unlicenced_broker.png "License and upgrading")
 
-8. Next step is to request a [License](#Acquire-your-License)
+Now you are ready to [Request a License](#request-a-hardware-license)
 
+### b) Refernce kit: Linux + Docker
 
-### Linux + Docker
+> **Prerequisites**<br>
+  You will need git, docker, docker-compose installed on your linux distribution<br>
 
-!> You will need git, docker, docker-compose installed on your linux distribution
+1. Get going with `docker-compose` an a few (moments)[https://github.com/remotivelabs/remotivebroker-bootstrap]
 
+2. Next step is to request a [License](#request-a-license)
 
-This part will explain how to install and run beamy-broker on linux with docker.
+### 2) Request a Hardware License
 
-1. Clone the beamylabs-start git repository and go into that directory
-
-   ```
-   git clone https://github.com/beamylabs/beamylabs-start.git
-   cd beamylabs-start
-   ```
-
-2. Start broker and web-client with docker-compose
-
-   ``docker-componse up -d``
-
-   This will start the beamy-broker together with the web-client on port 8080
-
-3. Go to the "About" page in the web-client.
-
-   If you run this on your local computer, use a browser and go to http://127.0.0.1:8080/#/about,
-   otherwise replace 127.0.0.1 with the ip/hostname of the computer.
-
-   You should se something like this
-
-   ![alt text](images/Unlicenced_broker.png "License and upgrading")
-
-   When you want to stop run ``docker-compose down``
-   
-4. Next step is to request a [License](#Acquire-your-License)
-
-### Code samples
-
-When your broker is up and running you are ready to connect and run your own code.
-
-We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
-
-As a developer you may choose to use our maintained libraries or work directly towards our public _gRPC interface_.
-
-#### Python
-
-The [Python](https://www.python.org/) samples are found in the [python directory](https://github.com/remotivelabs/remotivelabs-samples/python) in our samples repository. All the Python samples use our Python library which is available in the Python Package manager [PyPi](https://pypi.org/user/remotivelabs/).
-
-Install the Python library with `pip` in a terminal:
-
-    pip install remotivelabs-broker
-
-After the installation in complete you may execute any of the samples in the Python directory.
-
-Remember all our samples requires a broker which is up and running. Each sample is provided with a _readme_ file explaining how to run the sample with the necessary arguments.
-
-# Acquire your License
-
-Running BeamyBroker requires a valid license. After installing BeamyBroker you can request a license through the web client (or through the license API).
+Running RemotiveBroker requires a valid license. After installing RemotiveBroker you can request a license through the webb application (or through the license API).
 
 ![alt text](images/Unlicenced_broker.png "License and upgrading")
 
@@ -158,8 +130,29 @@ Running BeamyBroker requires a valid license. After installing BeamyBroker you c
 
    ![alt text](images/test_drive_graphs.png "License and upgrading")
 
-   You know have a working and licenced broker. _What_do_next_ ?
+   You now have a working and licenced broker.
 
+### 3) What to do next
+
+### Code samples
+
+When your broker is up and running you are ready to connect and run your own code.
+
+We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
+
+As a developer you may choose to use our maintained libraries or work directly towards our public _gRPC interface_.
+
+#### Python
+
+The [Python](https://www.python.org/) samples are found in the [python directory](https://github.com/remotivelabs/remotivelabs-samples/python) in our samples repository. All the Python samples use our Python library which is available in the Python Package manager [PyPi](https://pypi.org/user/remotivelabs/).
+
+Install the Python library with `pip` in a terminal:
+
+    pip install remotivelabs-broker
+
+After the installation in complete you may execute any of the samples in the Python directory.
+
+Remember all our samples requires a broker which is up and running. Each sample is provided with a _readme_ file explaining how to run the sample with the necessary arguments.
    
 
 
