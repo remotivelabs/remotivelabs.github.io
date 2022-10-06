@@ -306,5 +306,8 @@ Connect your Technica device to the secondary usb ethernet interface `eth1` whic
 
 #### Host Mobility MX-4 T30 FR
 
-Please reach out to us (hello@remotivelabs.com) if you like to use MX30-FR as a flexray bridge.
+Host Mobility MX-4 T30 FR can be used as a host for RemotiveBroker alternatively it can be
+configured to forward flexray traffic.
+
+Check out [bootstrap repository](https://github.com/remotivelabs/remotivebroker-bootstrap) for more information on how to get going.
 
