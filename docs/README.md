@@ -274,9 +274,9 @@ Each LIN transiver need a unique set of `target_port` and `server port` which ca
 ### CAN interfaces (additonal)
 
 Any socketcan compatible USB dongle can be added when physical interfaces are required. Amongst others, [PEAK-System](https://www.peak-system.com/) does provide such devices. 
-### FR interfaces
+### Flexray interfaces
 
-!> Write is currently not supported for FR devices
+!> Write is currently not supported out of the box and requires customizations.
 #### Technica CM CAN COMBO
 
 !> Make sure that your Techinca devices is configured to use `PLP` headers and also make sure to note specified `Destination MAC` (available by clicking `SPY`) typically `01:00:5e:00:00:00`. 
