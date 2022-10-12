@@ -134,7 +134,7 @@ When your RemotiveBroker is up and running you are ready to connect and run your
 We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
 
 As a developer you may choose to use our maintained libraries or work directly towards our 
-[public gRCP api](https://github.com/remotivelabs/remotivelabs-apis/tree/main/proto), as mentioned before, share your code; just make a PR and we'll have a look.
+[public gRCP api](https://github.com/remotivelabs/remotivelabs-apis/tree/main/protos), as mentioned before, share your code; just make a PR and we'll have a look.
 
 #### Python
 
