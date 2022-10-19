@@ -1,5 +1,5 @@
 
-# User Guide - Get (Evaluation) Licence
+# User Guide
 
 RemotiveLabs is a lightweight and language agnostic platform for software-centric automotive development. We offer a free evaluation 
 licence for 30 days. RemotiveBroker can be installed on the hardware of your choice (we have a growing list of 
@@ -83,7 +83,7 @@ You are now ready to [Request a License](#request-a-hardware-license).
 
 ### 2. Request a Hardware License
 
-Running RemotiveBroker requires a valid hardware license. After installing RemotiveBroker you can request a license through the web-client (or through the license API).
+Running RemotiveBroker requires a valid hardware license. We offer a 30 day free evaluation license. After installing RemotiveBroker you can request a license through the web-client (or through the license API).
 
 ![alt text](images/Unlicenced_broker.png "License and upgrading")
 
