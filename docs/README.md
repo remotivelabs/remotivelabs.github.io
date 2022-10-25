@@ -152,7 +152,7 @@ Remember all our samples requires a RemotiveBroker which is up and running. Each
    
 #### Andorid VHAL integration
 
-For more information, go [here](https://github.com/remotivelabs/remotivelabs-samples/tree/main/integrations/android-vhal).
+For more information, go [here](https://github.com/remotivelabs/remotivelabs-samples/tree/main/integrations/android-vhal/grpc-service).
 
 # Your first configuration (in car)
 
