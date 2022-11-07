@@ -150,9 +150,9 @@ Remember all our samples requires a RemotiveBroker which is up and running. Each
 
 > You can host your RemotiveBroker locally alternatively you can deploy you RemotiveBroker in [RemotiveCloud](https://demo.remotivelabs.com/). 
    
-#### Andorid VHAL integration
+#### Android VHAL integration
 
-For more information, go [here](https://github.com/remotivelabs/remotivelabs-samples/tree/main/integrations/android-vhal/grpc-service).
+For more information, go [here](https://github.com/remotivelabs/remotivelabs-android-vhal).
 
 # Your first configuration (in car)
 
