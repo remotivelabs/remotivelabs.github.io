@@ -79,7 +79,7 @@ You are now ready to [Request a License](#_2-request-a-hardware-license).
 
 1. Get going with `docker-compose` in a few moments by using our [bootstrap repository](https://github.com/remotivelabs/remotivebroker-bootstrap)
 
-2. Next step is to request a [License](#request-a-license)
+2. Next step is to request a [License](#_2-request-a-hardware-license)
 
 ### 2. Request a Hardware License
 
