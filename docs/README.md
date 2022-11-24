@@ -70,7 +70,7 @@ If you don't have a can shield you can use any socketcan compatible usb device, 
 
    ![alt text](images/Unlicenced_broker.png "License and upgrading")
 
-You are now ready to [Request a License](#2-request-a-hardware-license).
+You are now ready to [Request a License](#_2-request-a-hardware-license).
 
 #### b. Reference kit: Linux with Docker
 
