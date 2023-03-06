@@ -98,7 +98,7 @@ Running RemotiveBroker requires a valid hardware license. We offer a 30 day free
 
 
 
-   !> Your email MUST be part of an organisation with a licence policy, otherwise a 30 day trial
+!> Your email MUST be part of an organisation with a licence policy, otherwise a 30 day trial
       version is created for you.
 
 2. Enter your email and press "Request License"
