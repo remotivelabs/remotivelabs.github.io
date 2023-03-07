@@ -51,8 +51,8 @@ If you don't have a can shield you can use any socketcan compatible usb device, 
 
    If this is not possible, you need to connect to the RemotiveBroker internal WiFi access point.
    From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. 
-   In "About" section your can find the URL where the broker is accessible on your regular WiFi.
-
+   In "About" section your can find the URL where the broker is accessible on your regular WiFi. 
+  
    ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
    Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You now have internet
@@ -68,7 +68,7 @@ If you don't have a can shield you can use any socketcan compatible usb device, 
 
 7. In web-client navigate to "About" it should now look something like this.
 
-   ![alt text](images/Unlicenced_broker.png "License and upgrading")
+   ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
 You are now ready to [Request a License](#_2-request-a-hardware-license).
 
@@ -83,38 +83,31 @@ You are now ready to [Request a License](#_2-request-a-hardware-license).
 
 ### 2. Request a Hardware License
 
-Running RemotiveBroker requires a valid hardware license. We offer a 30 day free evaluation license. After installing RemotiveBroker you can request a license through the web-client (or through the license API).
+Running RemotiveBroker requires a valid hardware license. We offer a 30 day free evaluation license. After installing RemotiveBroker you can request a license through the web-client.
 
-![alt text](images/Unlicenced_broker.png "License and upgrading")
+![alt text](images/Unlicensed_broker.png "License and upgrading")
 
 !> If you are not connected to internet, pay extra attention to the steps in the guide since you 
    will need to switch back and forth between networks on your desktop.
 
 
-1. Press "ACQUIRE NEW LICENSE" 
+1. Press "Apply new license to broker" and you will se something like this.
 
-   !> Your email MUST be part of an organisation with a licence policy, otherwise a 30 day trial
+![alt text](images/request_license.png "License and upgrading")
+
+
+
+
+!> Your email MUST be part of an organisation with a licence policy, otherwise a 30 day trial
       version is created for you.
 
-2. Enter your email to request a license.
+2. Enter your email and press "Request License"
 
-3. Wait for the returning e-mail and copy/paste the licence phrase and press "ADD LICENSE".
+3. Wait for the returning e-mail and copy/paste the licence phrase and press "Apply license".
+                                                                                                                                                                        
+4. Under "License" it should now look something like this and you are now good to start use your RemotiveBroker. 
 
-4. Under "About" it should now look something like this and you are now good to start use your RemotiveBroker.
-
-     ![alt text](images/licenced_broker.png "License and upgrading")
-
-5. To verify that your installation is successful you can navigate to "Traffic Monitor" and replay 
-   a test drive that comes bundled. Expand the "Try out preconfigured and automatic playback" and press
-   "Start playback".
-
-    ![alt text](images/traffic_monitor_notraffic.png "License and upgrading")
-
-   This will upload a RemotiveBroker configuration together with a recorded drive, then start the recording and subscribe to some of the signals.
-
-   If everything is ok, you should see some graphs beeing displayed with "live" data.
-
-   ![alt text](images/test_drive_graphs.png "License and upgrading")
+     ![alt text](images/licensed_broker.png "License and upgrading")
 
    You now have a operational licenced RemotiveBroker.
 
@@ -181,9 +174,6 @@ There are two ways to configure the RemotiveBroker, one is to use the UI wizard 
 
 ## About configuration
 
-You can always query the current configuration in the menu. In web-client choose "Configuration" and you should see a valid configuration.
-
-![alt text](images/current_can_configuration.png "Current configuration")
 
 The following is a typical and very simple configuration
 ```json
