@@ -23,7 +23,7 @@ RemotiveBroker can be installed on the hardware of your choice. Please find our 
 
 #### a. Reference kit: Raspberry Pi 
 
-For convienince purposes we provide prebuilt [Raspberry Pi 4 images](https://releases.remotivelabs.com/) with the 
+For convenience purposes we provide prebuilt [Raspberry Pi 4 images](https://releases.remotivelabs.com/) with the 
 [Seeed CAN-shield](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html) drivers. 
 If you don't have a can shield you can use any socketcan compatible usb device, keep reading.
 
@@ -38,7 +38,7 @@ If you don't have a can shield you can use any socketcan compatible usb device, 
 1. Download the latest image from https://releases.remotivelabs.com/. At the time of writing this is *rpi-20220908_154525.img.gz*. 
 2. In `Raspberry Pi Imager`, choose "Use custom" and then select the downloaded image and write the image to the SD card.
 3. Put the SD card in the Pi
-4. Connect the Pi to ethernet so it gets internet access, where it will download additional upgrades when available (highly recommended)
+4. Connect the Pi to ethernet, so it gets internet access, where it will download additional upgrades when available (highly recommended)
 
 !> ssh access is by default only available over wired ethernet. Username/pwd pi/Aut0m0tive
 
@@ -47,20 +47,20 @@ If you don't have a can shield you can use any socketcan compatible usb device, 
 
    **Connected to internet through router (wired)**
 
-   If possible, the easiest way is the get the IP/URL from your router using it's admin interface.
+   If possible, the easiest way is the get the IP/URL from your router using its admin interface.
 
-   If this is not possible, you need to connect to the RemotiveBroker internal WiFi access point.
+   If this is not possible, you need to connect to the RemotiveBroker internal Wi-Fi access point.
    From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. 
-   In "About" section your can find the URL where the broker is accessible on your regular WiFi. 
+   In "About" section your can find the URL where the broker is accessible on your regular Wi-Fi. 
   
    ![alt text](images/webclient_accessible_on.png "License and upgrading")
 
-   Change back to your regular WiFi and use http://ip_in_your_router:8080 instead. You now have internet
+   Change back to your regular Wi-Fi and use http://ip_in_your_router:8080 instead. You now have internet
    access from both your client and the RemotiveBroker which will make things easier as we move on.
  
    **Not connected to internet router**
 
-   If you are not connected to internet, you need to connect to the RemotiveBroker internal WiFi access point.
+   If you are not connected to internet, you need to connect to the RemotiveBroker internal Wi-Fi access point.
    From your phone or computer, connect using WiFi **remotivelabs-\*** (password: remotivelabs) and navigate to http://192.168.4.1:8080. 
    In this state there is no internet access on your desktop or your browser which means that things get
    a bit more complicated as we move on.
@@ -83,7 +83,7 @@ You are now ready to [Request a License](#_2-request-a-hardware-license).
 
 ### 2. Request a Hardware License
 
-Running RemotiveBroker requires a valid hardware license. We offer a 30 day free evaluation license. After installing RemotiveBroker you can request a license through the web-client.
+Running RemotiveBroker requires a valid hardware license. We offer a 30-day free evaluation license. After installing RemotiveBroker you can request a license through the web-client.
 
 ![alt text](images/Unlicensed_broker.png "License and upgrading")
 
@@ -98,27 +98,27 @@ Running RemotiveBroker requires a valid hardware license. We offer a 30 day free
 
 
 
-!> Your email MUST be part of an organisation with a licence policy, otherwise a 30 day trial
+!> Your email MUST be part of an organisation with a licence policy, otherwise a 30-day trial
       version is created for you.
 
 2. Enter your email and press "Request License"
 
 3. Wait for the returning e-mail and copy/paste the licence phrase and press "Apply license".
                                                                                                                                                                         
-4. Under "License" it should now look something like this and you are now good to start use your RemotiveBroker. 
+4. Under "License" it should now look something like this, and you are now good to start use your RemotiveBroker. 
 
      ![alt text](images/licensed_broker.png "License and upgrading")
 
-   You now have a operational licenced RemotiveBroker.
+   You now have an operational licenced RemotiveBroker.
 
 ### 3. What to do next
 
 Below some tips for how to start getting value from RemotiveBroker and RemotiveExplorer. We recommend (in the order of your choice):
 
 * If you haven’t already, join our GitHub Community for Q&A and discussions
-* Check out out [code samples](#code-samples)
+* Check out [code samples](#code-samples)
 * Check out [RemotiveCloud](https://demo.remotivelabs.com/)
-* Share your client code [here](https://github.com/remotivelabs/remotivelabs-samples), just make a PR and we'll have a look.
+* Share your client code [here](https://github.com/remotivelabs/remotivelabs-samples), just make a PR, and we'll have a look.
 
 # Code samples
 
@@ -127,7 +127,7 @@ When your RemotiveBroker is up and running you are ready to connect and run your
 We offer a few code examples at our [Github samples repository](https://github.com/remotivelabs/remotivelabs-samples).
 
 As a developer you may choose to use our maintained libraries or work directly towards our 
-[public gRCP api](https://github.com/remotivelabs/remotivelabs-apis/tree/main/protos), as mentioned before, share your code; just make a PR and we'll have a look.
+[public gRCP api](https://github.com/remotivelabs/remotivelabs-apis/tree/main/protos), as mentioned before, share your code; just make a PR, and we'll have a look.
 
 #### Python
 
@@ -151,7 +151,7 @@ For more information, go [here](https://github.com/remotivelabs/remotivelabs-and
 
 Using this configuration you will be able to subscribe or record live signals in a real vehicle (or any operational can bus).
 
-!> This example requires that you have equipment which can be connected connected to the vehicle. Possible setup is 
+!> This example requires that you have equipment which can be connected to the vehicle. Possible setup is 
    [a](#a-reference-kit-raspberry-pi) or [b](#b-reference-kit-linux-with-docker) with a socketcan adapter.<br> 
    You also need the proper matching dbc file which corresponds to the bus you are connecting to.
 
@@ -166,7 +166,7 @@ There are two ways to configure the RemotiveBroker, one is to use the UI wizard 
 
 2. Under "Don´t have a configuration?" , press "Create configuration __here__" to start the wizard.
    
-   Pick your dbc file and then you can just click through all steps without any changes. The last step "Reconfigure" will upload the configuration to the broker
+   Pick your dbc file, and then you can just click through all steps without any changes. The last step "Reconfigure" will upload the configuration to the broker
 
 3. Your RemotiveBroker is now ready to subscribe to signals in your car.
 
@@ -196,10 +196,10 @@ The following is a typical and very simple configuration
 ```
 * `namespace` is your given name, which you can choose freely. This is the name you will use when you browse the bus in the `tree view` of write some code to access it. Suggestions would be: `BodyCAN`, `VehicleCan`  
 * `type` suggest what kind of physical link we are connecting to. This could be `can, canfd, vcan, lin, flexray, udp`
-* `database` hold information on how to encode and decode the traffic on link. Typlically a file with extenision `ldf, dbc, xml`
-* `device_name` is the physical socket representaion on your host computer. These names are controlled by your linux kernel and can be listed by doing `ip a`. On our prebuilt images valid names are `[can0..can1], [vcan0..vcan3]` 
+* `database` hold information on how to encode and decode the traffic on link. Typically, a file with extension `ldf, dbc, xml`
+* `device_name` is the physical socket representation on your host computer. These names are controlled by your linux kernel and can be listed by doing `ip a`. On our prebuilt images valid names are `[can0..can1], [vcan0..vcan3]` 
 
-The example above contains two namespaces for the sake of clarity. Your configuration can hold any number of namespace depeding on your hardware setup.
+The example above contains two namespaces for the sake of clarity. Your configuration can hold any number of namespace depending on your hardware setup.
 
 ### Upload your custom configuration
 
@@ -211,21 +211,21 @@ Once uploaded the RemotiveBroker will verify that the configuration is valid, if
 
 !> Advanced reference for `interfaces.json` is located [here](https://github.com/remotivelabs/remotivebroker-bootstrap/blob/master/configuration/interfaces_referense.json).
 
-## Additonal interfaces
+## Additional interfaces
 
 As the configuration above suggested additional interfaces can be added to the existing setup. Some of these setups requires `ssh` and custom configuration of the host, in this scenario, the Raspberry Pi 4.
 
 > Typical usb to ethernet adapter [here](images/USB-to-Ethernet.png) 
 
-> In this case `host` referrs to Raspberry Pi 4
+> In this case `host` refers to Raspberry Pi 4
 
 ### LIN interfaces
 
-Connect a secondary usb to ETH adapter to the host. Here you can connect a single `LIN transivers` box alternatively a switch with a number of `LIN transivers` each lin transiver is identified and configured according to it's unique `device_identifier`
+Connect a secondary usb to ETH adapter to the host. Here you can connect a single `LIN transivers` box alternatively a switch with a number of `LIN transivers` each lin transceiver is identified and configured according to it's unique `device_identifier`
 
 This id needs to reflect and be present in `interfaces.json`. The following configuration shows two `lin` devices, `8` and `7`. Note that `8` has been configured to operate as master whereas `7` operates as slave.
 
-Each LIN transiver need a unique set of `target_port` and `server port` which can be selected freely. Once the trancivers get powered their configurations will be distributed.
+Each LIN transceiver need a unique set of `target_port` and `server port` which can be selected freely. Once the transceivers get powered their configurations will be distributed.
 
 ```json
 {
@@ -259,9 +259,9 @@ Each LIN transiver need a unique set of `target_port` and `server port` which ca
 }
 ```
 
-!> The prebuilt image will host a DHCP server on the added adapter. LIN transivers and the RemotiveBroker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
+!> The prebuilt image will host a DHCP server on the added adapter. LIN transceivers and the RemotiveBroker needs to reside on the same subnet. Other custom topologies are supported and sometimes preferred.
 
-### CAN interfaces (additonal)
+### CAN interfaces (additional)
 
 Any socketcan compatible USB dongle can be added when physical interfaces are required. Amongst others, [PEAK-System](https://www.peak-system.com/) does provide such devices. 
 ### Flexray interfaces
@@ -271,7 +271,7 @@ Any socketcan compatible USB dongle can be added when physical interfaces are re
 
 !> Make sure that your Techinca devices is configured to use `PLP` headers and also make sure to note specified `Destination MAC` (available by clicking `SPY`) typically `01:00:5e:00:00:00`. 
 
-Connect your Technica device to the secondary usb ethernet interface `eth1` which is mentioned above. As mulitcast address provide `Destination MAC`.
+Connect your Technica device to the secondary usb ethernet interface `eth1` which is mentioned above. As multicast address provide `Destination MAC`.
 ```json
 {
   "chains": [
