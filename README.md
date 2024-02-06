@@ -1,25 +1,8 @@
-# beamylabs.github.io
+# remotivelabs.github.io
 
-Repo for the GitHub Pages site https://remotivelabs.github.io/ built using Docsify (docsify.js.org)
+Repo for the [GitHub Pages](https://docs.github.com/en/pages) site https://remotivelabs.github.io/.
 
+> ❗️We no longer publish docs to this repo, but to https://github.com/remotivelabs/remotiveplatform-docs instead.
 
-# Deploy
-
-Pushing the markdown to this repo (master branch) automagically updates the GitHub Pages site
-
-# Local preview
-
-Quick start:
-
-It is recommended to install docsify-cli globally, which helps initializing and previewing the website locally.
-
-```bash
-npm i docsify-cli -g
-```
-
-Preview your site
-Run the local server with docsify serve. You can preview your site in your browser on http://localhost:3000.
-
-```bash
-docsify serve docs
-```
+--
+We configured redirect from https://remotivelabs.github.io/ to the new website.
